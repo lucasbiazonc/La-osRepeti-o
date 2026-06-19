@@ -20,5 +20,8 @@ let min = Math.min(...notas)
 let mSete = notas.filter(notas => notas >= 7)
 //console.log(mSete)
 
-
+//Ex2
+let tempi = 12;
+let tempf = 40;
+let tmi = 0;
 
