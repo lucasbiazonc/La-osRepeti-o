@@ -1,3 +1,6 @@
+//readline
+const prompt = require('readline-sync');
+
 //Ex1
 let alunos = ['Artur','Joseph', 'Jony', 'Kauan', 'Luisa', 'Matheus', 'Murilo', 'Nathan', 'Vini', 'Yuri'];
 let notas = [5, 6, 8, 4, 9, 3, 7, 10, 0, 6];
@@ -23,9 +26,9 @@ let mSete = notas.filter(notas => notas >= 7)
 //Ex2
 let tempi = 12;
 let tempf = 40;
-let tmi = 0;
 
-//Ex3
+
+/* //Ex3
 let vendas = [150000, 128000, 569000, 222222, 177777, 300900, 450008, 340000, 190000, 268000, 309000, 200001];
 s = 0;
 for (let i = 0; i < vendas.length; i++) {
@@ -37,3 +40,8 @@ console.log(s)
 console.log(media)   
 console.log(mx)   
 console.log(mn)
+ */
+
+//Ex4
+let saldo = 2000
+let msg = 'Seu saldo é de R$', saldo
