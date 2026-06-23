@@ -43,7 +43,7 @@ console.log(mn)
  */
 
 //Ex4
-let saldo = 2000
+/* let saldo = 2000
 console.log(`Seu saldo é de R$${saldo}`);
 do{
     let retirada = Number(readline.question('Digite quanto deseja retirar em R$'))
@@ -56,5 +56,45 @@ do{
         console.log('Saldo insuficiente, escolha um número menor ou igual ao saldo');
     };
 }   while(true);
-
+ */
 //Ex5
+/* let np = ['Chetos']
+let nq = ['15']
+do{
+    let fim = readline.question('Digite 4 caso não queira adicionar mais mais nada')
+    if (fim = 4){
+        console.log(`Todos os produtos novos e sua quantidade foram adicionados`)
+        console.log(np)
+        console.log(nq)
+        break
+    }
+    else{
+        np.push(readline.question('Adicione o nome o proximo produto'));
+        nq.push(readline.question('Adicione a quantidade do produto'));
+    };
+ } while(true); */
+
+ let totalProdutos = 0;
+let maiorNome = "";
+let maiorQtd = -1;
+let somaItens = 0;
+
+while (true) {
+    let nome = prompt.question("Nome do produto: ");
+    if (nome.toUpperCase() === "FIM") break;
+
+    let qtd = parseInt(prompt.question("Quantidade: "));
+
+    totalProdutos++;
+    somaItens += qtd;
+
+    if (qtd > maiorQtd) {
+        maiorQtd = qtd;
+        maiorNome = nome;
+    }
+}
+
+console.log("\n--- RESULTADO ---");
+console.log("Total de produtos cadastrados:", totalProdutos);
+console.log("Produto com maior quantidade:", maiorNome);
+console.log("Soma total de itens:", somaItens);
