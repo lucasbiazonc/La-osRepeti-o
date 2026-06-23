@@ -1,5 +1,5 @@
 //readline
-const prompt = require('readline-sync');
+const readline = require('readline-sync');
 
 //Ex1
 let alunos = ['Artur','Joseph', 'Jony', 'Kauan', 'Luisa', 'Matheus', 'Murilo', 'Nathan', 'Vini', 'Yuri'];
@@ -44,4 +44,17 @@ console.log(mn)
 
 //Ex4
 let saldo = 2000
-let msg = 'Seu saldo é de R$', saldo
+console.log(`Seu saldo é de R$${saldo}`);
+do{
+    let retirada = Number(readline.question('Digite quanto deseja retirar em R$'))
+    if (retirada <= saldo){
+        let saldoAtual = saldo -= retirada
+        console.log(`O saldo atual é de R$${saldoAtual}`)
+        break
+    }
+    else{
+        console.log('Saldo insuficiente, escolha um número menor ou igual ao saldo');
+    };
+}   while(true);
+
+//Ex5
