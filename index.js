@@ -86,7 +86,7 @@ console.log("Soma total de itens:", somaItens);
  */
 
 //Ex6
-const senha = 1234
+/* const senha = 1234
 let Tentativas = [];
 let ts = 0;
 do{
@@ -105,7 +105,9 @@ do{
             console.log('Acesso Bloqueado')
             break
         }
-        else{console.log(`Ja tentou ${ts}`)};
+        else{};
     };
 
-} while(true);
+} while(true); */
+
+//Ex7
