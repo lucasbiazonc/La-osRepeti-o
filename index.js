@@ -57,33 +57,18 @@ do{
     };
 }   while(true);
  */
-//Ex5
-/* let np = ['Chetos']
-let nq = ['15']
-do{
-    let fim = readline.question('Digite 4 caso não queira adicionar mais mais nada')
-    if (fim = 4){
-        console.log(`Todos os produtos novos e sua quantidade foram adicionados`)
-        console.log(np)
-        console.log(nq)
-        break
-    }
-    else{
-        np.push(readline.question('Adicione o nome o proximo produto'));
-        nq.push(readline.question('Adicione a quantidade do produto'));
-    };
- } while(true); */
 
- let totalProdutos = 0;
+//Ex5
+/* let totalProdutos = 0;
 let maiorNome = "";
 let maiorQtd = -1;
 let somaItens = 0;
 
 while (true) {
-    let nome = prompt.question("Nome do produto: ");
+    let nome = readline.question("Nome do produto: ");
     if (nome.toUpperCase() === "FIM") break;
 
-    let qtd = parseInt(prompt.question("Quantidade: "));
+    let qtd = Number(readline.question("Quantidade: "));
 
     totalProdutos++;
     somaItens += qtd;
@@ -98,3 +83,29 @@ console.log("\n--- RESULTADO ---");
 console.log("Total de produtos cadastrados:", totalProdutos);
 console.log("Produto com maior quantidade:", maiorNome);
 console.log("Soma total de itens:", somaItens);
+ */
+
+//Ex6
+const senha = 1234
+do{
+    let tent = Number(readline.question('Coloque a senha '));
+    let Tentativas = [];
+    let ts = 0;
+    if(tent === senha){
+        console.log('Acesso liberado')
+        break 
+    }
+    else{
+        console.log('Tentativa falha')
+        Tentativas.push(Number(1))
+        for (let i = 0; i < Tentativas.length; i++) {
+            ts += Tentativas[i];};
+
+    if(ts >= 3){
+        console.log('Acesso Bloqueado')
+        break
+    }
+    else{console.log(`Ja tent`)};
+    };
+
+} while(true);
