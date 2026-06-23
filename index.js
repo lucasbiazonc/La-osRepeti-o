@@ -87,10 +87,10 @@ console.log("Soma total de itens:", somaItens);
 
 //Ex6
 const senha = 1234
+let Tentativas = [];
+let ts = 0;
 do{
     let tent = Number(readline.question('Coloque a senha '));
-    let Tentativas = [];
-    let ts = 0;
     if(tent === senha){
         console.log('Acesso liberado')
         break 
@@ -101,11 +101,11 @@ do{
         for (let i = 0; i < Tentativas.length; i++) {
             ts += Tentativas[i];};
 
-    if(ts >= 3){
-        console.log('Acesso Bloqueado')
-        break
-    }
-    else{console.log(`Ja tent`)};
+        if(ts > 3){
+            console.log('Acesso Bloqueado')
+            break
+        }
+        else{console.log(`Ja tentou ${ts}`)};
     };
 
 } while(true);
